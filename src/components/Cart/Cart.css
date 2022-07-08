@@ -1,0 +1,32 @@
+.order_summer{
+    text-align: center;
+}
+.order_summer h3{
+    font-size: 1.17em;
+    font-weight: bold;
+}
+.order_bill{
+    font-size: 13px;
+    text-align: left;
+}
+.grant_total{
+    color: #b12704;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+}
+.order_item_bill{
+    margin-left: 10px;
+}
+.order_btn{
+    background-color: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    width: 100%;
+    height: 26px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    border-radius: 3px;
+    vertical-align: middle;
+}

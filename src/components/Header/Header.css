@@ -2,8 +2,9 @@
     text-align: center;
 }
 .header_img{
-    height: 60px;
+    height: 70px;
     align-items: center;
+    margin-bottom: 12px;
 }
 .header nav{
     background: #000;

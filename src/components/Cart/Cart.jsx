@@ -29,12 +29,17 @@ const Cart = (props) => {
     const grandTotal = total + shipping + tax;
     return (
         <div>
-            <h3>Order summer</h3>
-            <h5>Items Orders: {totalQuantity}</h5>
-            <p>Total : {total.toFixed(2)}</p>
-            <p>Shipping : {shipping}</p>
-            <p>Tax : {tax.toFixed(2)}</p>
-            <p>Grand Total : {grandTotal.toFixed(2)}</p>
+            <span className='order_summer'>
+                <h3>Order summer</h3>
+                <p>Items Orders: {totalQuantity}</p>
+            </span>
+            <span className="order_bill">
+                <p>Items Total : <span className='order_item_bill'>${total.toFixed(2)}</span></p>
+                <p>Shipping & Handling : <span className='order_item_bill'>${shipping}</span></p>
+                <p>Tax : <span className='order_item_bill'>${tax.toFixed(2)}</span></p>
+            </span>
+            <p className='grant_total'>Grand Total : <span className='order_item_bill'>${grandTotal.toFixed(2)}</span></p>
+            <button className='order_btn'>Review your order</button>
         </div>
     );
 };
