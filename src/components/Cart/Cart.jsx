@@ -39,7 +39,7 @@ const Cart = (props) => {
                 <p>Tax : <span className='order_item_bill'>${tax.toFixed(2)}</span></p>
             </span>
             <p className='grant_total'>Grand Total : <span className='order_item_bill'>${grandTotal.toFixed(2)}</span></p>
-            <button className='order_btn'>Review your order</button>
+            {props.children}
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
@@ -6,9 +7,9 @@ const Header = () => {
         <div className='header'>
             <img className='header_img' src="https://ema-john.firebaseapp.com/static/media/logo.95f238a5.png" alt="" />
             <nav>
-                <a href="/shop">Shop</a>
-                <a href="/order_review">Order Review</a>
-                <a href="/manage">Manage Inventory here</a>
+                <NavLink to="shop">Shop</NavLink>
+                <NavLink to="order_review">Order Review</NavLink>
+                <NavLink to="manage">Manage Inventory here</NavLink>
             </nav>
         </div>
     );

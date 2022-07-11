@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from './components/Header/Header';
 import NotFound from './components/NotFound/NotFound';
 import OrderReview from './components/OrderReview/OrderReview';
@@ -9,7 +9,7 @@ import Inventory from "./components/Inventory/Inventory";
 const App = () => {
   return (
     <div>
-    <Header />
+      <Header />
       <Routes>
         <Route path="/" element={<Shop />} />
         <Route path="shop" element={<Shop />} />
