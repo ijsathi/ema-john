@@ -1,17 +1,26 @@
 import React from 'react';
 import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
-import { removeFromDb } from '../../utilities/fakedb';
+import { clearTheCart, removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
+import { useNavigate } from 'react-router-dom';
 
 const OrderReview = () => {
     const [products, setProducts] = useProducts();
     const [cart, setCart] = useCart(products);
+    const navigate = useNavigate();
+
     const handleRemove = key => {
         const newCart = cart.filter(product => product.key !== key);
         setCart(newCart);
         removeFromDb(key);
+    }
+
+    const handlePlaceOrder = () => {
+        navigate("/place_order");
+        setCart([]); /* eta korle sudhu live site theke remove hbe */
+        clearTheCart(); /* eta korle  live site & storage theke remove hbe */
     }
     return (
         <div className='shop-container'>
@@ -25,7 +34,7 @@ const OrderReview = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart} >
-                    <button className='order_btn'>Place Order</button> 
+                    <button onClick={handlePlaceOrder} className='order_btn'>Place Order</button>
                 </Cart>
             </div>
         </div>
