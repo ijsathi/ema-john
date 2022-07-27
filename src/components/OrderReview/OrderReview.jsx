@@ -18,7 +18,7 @@ const OrderReview = () => {
     }
 
     const handlePlaceOrder = () => {
-        navigate("/place_order");
+        navigate("/shipping");
         setCart([]); /* eta korle sudhu live site theke remove hbe */
         clearTheCart(); /* eta korle  live site & storage theke remove hbe */
     }
@@ -34,7 +34,7 @@ const OrderReview = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart} >
-                    <button onClick={handlePlaceOrder} className='order_btn'>Place Order</button>
+                    <button onClick={handlePlaceOrder} className='order_btn'>Proceed to Shipping</button>
                 </Cart>
             </div>
         </div>
