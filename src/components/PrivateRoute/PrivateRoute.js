@@ -24,7 +24,7 @@ import React from 'react';
 import useAuth from '../../hooks/useAuth';
 import { Navigate, useLocation } from "react-router-dom";
 
-const PrivateRoute = ({ children, ...rest }) => {
+const PrivateRoute = ({ children }) => {
     const { user } = useAuth();
     let location = useLocation();
     if (user.email) {

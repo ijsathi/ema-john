@@ -17,10 +17,11 @@ const OrderReview = () => {
         removeFromDb(key);
     }
 
-    const handlePlaceOrder = () => {
+    const handleProceedToShipping = () => {
+        // navigate.push('/shipping')
         navigate("/shipping");
-        setCart([]); /* eta korle sudhu live site theke remove hbe */
-        clearTheCart(); /* eta korle  live site & storage theke remove hbe */
+        // setCart([]); /* eta korle sudhu live site theke remove hbe */
+        // clearTheCart(); /* eta korle  live site & storage theke remove hbe */
     }
     return (
         <div className='shop-container'>
@@ -34,7 +35,7 @@ const OrderReview = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart} >
-                    <button onClick={handlePlaceOrder} className='order_btn'>Proceed to Shipping</button>
+                    <button onClick={handleProceedToShipping} className='order_btn'>Proceed to Shipping</button>
                 </Cart>
             </div>
         </div>

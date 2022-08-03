@@ -7,8 +7,8 @@ const Login = () => {
     const { signInUsingGoogle } = useAuth();
     const location = useLocation();
     const history = useNavigate();
-    const redirect_uri = location.state?.from || '/'
-    console.log("came from", location.state?.from);
+    const redirect_uri = location.state?.from || '/shop'
+    // console.log("came from", location.state?.from);
 
     const handleGoogleLogin = () => {
         signInUsingGoogle()
@@ -18,11 +18,11 @@ const Login = () => {
     }
     return (
         <div className='login_form'>
-            <div>
-                <h2>Login</h2>
+            <div className='login_all'>
+                <h2 style={{textAlign:"center"}}>Login</h2>
                 <form>
-                    <input type="email" name="" id="" /><br />
-                    <input type="password" name="" id="" /><br />
+                    <input className='email_input' type="email" name="" id="" placeholder='write your email' /><br />
+                    <input className='pass_input' type="password" name="" id="" placeholder='your password' /><br />
                     <input type="submit" value="Submit" />
                 </form>
                 <p>New to ema-John ? <Link to='/register'>Create Account</Link></p>
