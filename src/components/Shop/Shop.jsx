@@ -8,18 +8,30 @@ import './Shop.css';
 const Shop = () => {
     // for all product
     const [products, setProducts] = useState([]);
+
     // for add to cart
     const [cart, setCart] = useState([]);
+
     // for search product
-    const [displayProduct, setDisplayProduct] = useState([])
+    const [displayProduct, setDisplayProduct] = useState([]);
+
+    // for pagination
+    const [pageCount, setPageCount] = useState(0);
+
+    // single page 
+    const [page, setPage] = useState(0);
+    const size = 10;
     useEffect(() => {
-        fetch("http://localhost:5000/products")
+        fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
-                setProducts(data);
-                setDisplayProduct(data);
-            })
-    }, []);
+                setProducts(data.products);
+                setDisplayProduct(data.products);
+                const count = data.count;
+                const pageNumber = Math.ceil(count / size);
+                setPageCount(pageNumber);
+            });
+    }, [page]);
 
     // for localStorage
     useEffect(() => {
@@ -79,6 +91,16 @@ const Shop = () => {
                             key={product.key}
                             handleAddToCart={handleAddToCart} />)
                     }
+                    <div className="pagination">
+                        {
+                            [...Array(pageCount).keys()]
+                                .map(number => <button
+                                    className={number === page ? "selected" : ''}
+                                    key={number}
+                                    onClick={() => setPage(number)}
+                                >{number + 1}</button>)
+                        }
+                    </div>
                 </div>
                 <div className="cart-container">
                     <Cart cart={cart} >
