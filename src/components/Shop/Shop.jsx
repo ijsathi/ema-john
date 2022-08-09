@@ -12,14 +12,15 @@ const Shop = () => {
     // for add to cart
     const [cart, setCart] = useState([]);
 
-    // for search product
-    const [displayProduct, setDisplayProduct] = useState([]);
+    // single page 
+    const [page, setPage] = useState(0);
 
     // for pagination
     const [pageCount, setPageCount] = useState(0);
 
-    // single page 
-    const [page, setPage] = useState(0);
+    // for search product
+    const [displayProduct, setDisplayProduct] = useState([]);
+
     const size = 10;
     useEffect(() => {
         fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
@@ -34,23 +35,23 @@ const Shop = () => {
     }, [page]);
 
     // for localStorage
-    useEffect(() => {
-        if (products.length) {
-            const savedCart = getStoredCart();
-            const storedCart = [];
-            for (const key in savedCart) {
-                console.log(key, savedCart[key]);
-                const addedProduct = products.find(product => product.key === key);
-                if (addedProduct) {
-                    const quantity = savedCart[key];
-                    addedProduct.quantity = quantity;
-                    // console.log(addedProduct);
-                    storedCart.push(addedProduct);
-                }
-            }
-            setCart(storedCart);
-        }
-    }, [products])
+    // useEffect(() => {
+    //     if (products.length) {
+    //         const savedCart = getStoredCart();
+    //         const storedCart = [];
+    //         for (const key in savedCart) {
+    //             // console.log(key, savedCart[key]);
+    //             const addedProduct = products.find(product => product.key === key);
+    //             if (addedProduct) {
+    //                 const quantity = savedCart[key];
+    //                 addedProduct.quantity = quantity;
+    //                 // console.log(addedProduct);
+    //                 storedCart.push(addedProduct);
+    //             }
+    //         }
+    //         setCart(storedCart);
+    //     }
+    // }, [products])
 
     const handleAddToCart = (product) => {
         const exists = cart.find(pd => pd.key === product.key);
@@ -95,7 +96,7 @@ const Shop = () => {
                         {
                             [...Array(pageCount).keys()]
                                 .map(number => <button
-                                    className={number === page ? "selected" : ''}
+                                    className={number === page ? 'selected' : ''}
                                     key={number}
                                     onClick={() => setPage(number)}
                                 >{number + 1}</button>)

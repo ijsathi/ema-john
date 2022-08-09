@@ -5,7 +5,7 @@ import './Header.css';
 
 const Header = () => {
     const { user, logOut } = useFirebase();
-    console.log(user);
+    // console.log(user);
     return (
         <div className='header'>
             <img className='header_img' src="https://ema-john.firebaseapp.com/static/media/logo.95f238a5.png" alt="" />

@@ -1,14 +1,12 @@
 import React from 'react';
 import useCart from '../../hooks/useCart';
-import useProducts from '../../hooks/useProducts';
-import { clearTheCart, removeFromDb } from '../../utilities/fakedb';
+import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import { useNavigate } from 'react-router-dom';
 
 const OrderReview = () => {
-    const [products, setProducts] = useProducts();
-    const [cart, setCart] = useCart(products);
+    const [cart, setCart] = useCart();
     const navigate = useNavigate();
 
     const handleRemove = key => {
