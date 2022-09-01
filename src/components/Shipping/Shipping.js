@@ -32,14 +32,14 @@ const Shipping = () => {
     return (
         <div>
             <form className='shipping_form' onSubmit={handleSubmit(onSubmit)}>
-                <input defaultValue={user.displayName} placeholder="your name" {...register("name")} />
+                <input defaultValue={user.displayName} placeholder="Name*" {...register("name")} />
 
-                <input defaultValue={user.email} placeholder='your mail' {...register("email", { required: true })} />
+                <input type="email" id="email" name="email" required defaultValue={user.email} placeholder='Email*' {...register("email", { required: true })} />
                 {errors.email && <span className='err'>This field is required</span>}
 
-                <input placeholder="your address" {...register("address")} />
-                <input placeholder="city" {...register("city")} />
-                <input placeholder="your phone" {...register("phone")} />
+                <input type="text" id="address" name="address" required placeholder="Address*" {...register("address")} />
+                <input type="text" id="city" name="city" required placeholder="City*" {...register("city")} />
+                <input type="number" id="number" name="number" required placeholder="Phone*" {...register("phone")} />
 
                 <input type="submit" />
             </form>

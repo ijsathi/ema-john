@@ -14,6 +14,9 @@ const Header = () => {
                 <NavLink to="order_review">Order Review</NavLink>
                 <NavLink to="manage">Manage Inventory here</NavLink>
                 {
+                    user.email && <NavLink to="orders">Orders</NavLink>
+                }
+                {
                     user.email && <span style={{color:'white', marginRight:10}}>Hello {user.displayName}</span>
                     // user.email && <span>
                     //     <img className='user_img' src={user.photoURL} alt="" />

@@ -11,6 +11,7 @@ import Register from './components/Register/Register';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Shipping from './components/Shipping/Shipping';
+import Orders from './components/Orders/Orders';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="manage" element={<PrivateRoute><Inventory /></PrivateRoute>} />
           <Route path="place_order" element={<PrivateRoute><PlaceOrder /></PrivateRoute>} />
           <Route path="shipping" element={<PrivateRoute><Shipping /></PrivateRoute>} />
+          <Route path="orders" element={<PrivateRoute><Orders /></PrivateRoute>} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="*" element={<NotFound />} />
