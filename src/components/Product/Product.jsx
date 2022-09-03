@@ -13,7 +13,7 @@ const Product = (props) => {
                 <img src={img} alt={category} />
             </div>
             <div style={{ marginLeft: "20px" }}>
-                <h4 className='product_name'>{name}</h4>
+                <p className='product_name fs-6 fw-bold'>{name}</p>
                 <div style={{ display: "flex" }}>
                     <div>
                         <p><small>By: {seller}</small></p>

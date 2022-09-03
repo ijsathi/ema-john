@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
+import { Nav, Navbar, NavDropdown, Form } from 'react-bootstrap';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
@@ -79,11 +80,51 @@ const Shop = () => {
     }
     return (
         <div>
-            <div className="search_container">
-                <input type="text"
-                    placeholder='type here to search'
-                    onChange={handleSearch} />
-            </div>
+            <Navbar className='header2' variant="dark" sticky='top' collapseOnSelect expand="lg">
+                <div className="search_container">
+                    <div class="row w-100">
+                        <div class="col-4">
+                            <div class="col-6 col-md-4 ms-5">
+                                <div>
+                                    <img style={{ width: "100px" }} src="https://www.citypng.com/public/uploads/small/116610558473zd5aqcwoehrryolbpo80wkpyhwadulu7fynvezhi1bronkajt04bd5mmd1pp46270t6yl5bn6gf8btpckgcyvg3lcgv0hwpyepx.png" alt="" />
+                                </div>
+                                <div >
+                                    <Form.Select style={{ fontSize: "13px" }} aria-label="Default select example">
+                                        <option>CATEGORY'S</option>
+                                        <option value="mobile">Mobile</option>
+                                        <option value="laptop">Laptop</option>
+                                        <option value="charger">Charger</option>
+                                        <option value="charger">Charger</option>
+                                        <option value="charger">Charger</option>
+                                        <option value="charger">Charger</option>
+                                    </Form.Select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="">
+                                <form class="" role="search">
+                                    <div class="input-group add-on">
+                                        <input class="form-control" type="text"
+                                            placeholder='Search in ema-john'
+                                            onChange={handleSearch} />
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default" type="text">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="">
+                                <img className='header_img' src="https://icms-image.slatic.net/images/ims-web/e6fd2baf-e763-44e8-9c7a-6cb0da66a49f.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Navbar>
             <div className='shop-container'>
                 <div className="product-container">
                     {
