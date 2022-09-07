@@ -3,11 +3,6 @@
     background-color: rgb(243, 242, 242);
     border-color: #a88734 #9c7e31 #846a29;
 }
-.active-tip {
-    color: white;
-    background: rgb(8, 3, 2);
-    border-bottom: 2px solid white;
-}
 .nav-shop{
     color: #be8c0f !important; 
 }

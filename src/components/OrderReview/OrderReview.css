@@ -1,0 +1,13 @@
+.order-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background: #fff;
+}
+.order-product-container{
+    border-right: 1px solid lightgrey;
+    margin-right: 6px;
+    margin-left: 50px;
+}
+/* .cart-container{
+    background: rgb(243, 242, 242);
+} */

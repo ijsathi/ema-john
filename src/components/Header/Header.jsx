@@ -26,7 +26,7 @@ const Header = () => {
                                 {/* <Link className='nav-text' style={{ textDecoration: 'none' }} to='order_review'><small> <FontAwesomeIcon icon={faCartShopping} /> </small></Link> */}
                             </Nav.Link>
 
-                            <NavDropdown className='nav-text' title={<small>MORE</small>} id="basic-nav-dropdown">
+                            <NavDropdown title={<small className='nav-text'>MORE</small>} id="basic-nav-dropdown">
                                 <NavDropdown.Item href="">
                                     <Nav.Link>
                                         <Link style={{ color: '#000', textDecoration: 'none' }} to='about_us' >About Us</Link>

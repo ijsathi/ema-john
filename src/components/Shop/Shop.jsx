@@ -16,7 +16,7 @@ const Shop = () => {
     // single page 
     const [page, setPage] = useState(0);
 
-    // for pagination
+    // for shop_pagination
     const [pageCount, setPageCount] = useState(0);
 
     // for search product
@@ -69,6 +69,7 @@ const Shop = () => {
         setCart(newCart);
         // save to database when my add to cart(for now)
         addToDb(product.key)
+        alert("Added Successfully ✅")
     }
 
     // for search filter
@@ -82,43 +83,43 @@ const Shop = () => {
         <div>
             <Navbar className='header2' variant="dark" sticky='top' collapseOnSelect expand="lg">
                 <div className="search_container">
-                    <div class="row w-100">
-                        <div class="col-4">
-                            <div class="col-6 col-md-4 ms-5">
+                    <div className="row w-100">
+                        <div className="col-4">
+                            <div className="col-6 col-md-4 ms-5">
                                 <div>
                                     <img style={{ width: "100px" }} src="https://www.citypng.com/public/uploads/small/116610558473zd5aqcwoehrryolbpo80wkpyhwadulu7fynvezhi1bronkajt04bd5mmd1pp46270t6yl5bn6gf8btpckgcyvg3lcgv0hwpyepx.png" alt="" />
                                 </div>
                                 <div >
                                     <Form.Select style={{ fontSize: "13px" }} aria-label="Default select example">
                                         <option>CATEGORY'S</option>
-                                        <option value="mobile">Mobile</option>
-                                        <option value="laptop">Laptop</option>
-                                        <option value="charger">Charger</option>
-                                        <option value="charger">Charger</option>
-                                        <option value="charger">Charger</option>
-                                        <option value="charger">Charger</option>
+                                        <option disabled value="mobile">Mobile</option>
+                                        <option disabled value="laptop">Laptop</option>
+                                        <option disabled value="charger">Charger</option>
+                                        <option disabled value="charger">Cable</option>
+                                        <option disabled value="charger">Torch</option>
+                                        <option disabled value="charger">Backpack</option>
                                     </Form.Select>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="">
-                                <form class="" role="search">
-                                    <div class="input-group add-on">
-                                        <input class="form-control" type="text"
+                        <div className="col-6">
+                            <div className="">
+                                <form className="" role="search">
+                                    <div className="input-group add-on">
+                                        <input className="form-control" type="text"
                                             placeholder='Search in ema-john'
                                             onChange={handleSearch} />
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-default" type="text">
-                                                <i class="fa fa-search"></i>
+                                        <div className="input-group-btn">
+                                            <button className="btn btn-default" type="text">
+                                                <i className="fa fa-search"></i>
                                             </button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <div class="">
+                        <div className="col-2">
+                            <div className="">
                                 <img className='header_img' src="https://icms-image.slatic.net/images/ims-web/e6fd2baf-e763-44e8-9c7a-6cb0da66a49f.png" alt="" />
                             </div>
                         </div>
@@ -133,7 +134,7 @@ const Shop = () => {
                             key={product.key}
                             handleAddToCart={handleAddToCart} />)
                     }
-                    <div className="pagination">
+                    <div className="shop_pagination">
                         {
                             [...Array(pageCount).keys()]
                                 .map(number => <button
@@ -147,7 +148,7 @@ const Shop = () => {
                 <div className="cart-container">
                     <Cart cart={cart} >
                         <Link to='/order_review'>
-                            <button className='order_btn'>Review your order</button>
+                            <button className='r-order_btn'>Review your order</button>
                         </Link>
                     </Cart>
                 </div>

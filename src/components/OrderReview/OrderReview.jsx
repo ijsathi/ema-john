@@ -4,6 +4,7 @@ import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import { useNavigate } from 'react-router-dom';
+import './OrderReview.css';
 
 const OrderReview = () => {
     const [cart, setCart] = useCart();
@@ -13,6 +14,7 @@ const OrderReview = () => {
         const newCart = cart.filter(product => product.key !== key);
         setCart(newCart);
         removeFromDb(key);
+        alert("Remove Successfully")
     }
 
     const handleProceedToShipping = () => {
@@ -22,8 +24,8 @@ const OrderReview = () => {
         // clearTheCart(); /* eta korle  live site & storage theke remove hbe */
     }
     return (
-        <div className='shop-container'>
-            <div className="product-container">
+        <div className='order-container'>
+            <div className="order-product-container">
                 {
                     cart.map(product => <ReviewItem
                         key={product.key}
@@ -33,7 +35,7 @@ const OrderReview = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart} >
-                    <button onClick={handleProceedToShipping} className='order_btn'>Proceed to Shipping</button>
+                    <button onClick={handleProceedToShipping} className='r-order_btn'>Proceed to Shipping</button>
                 </Cart>
             </div>
         </div>

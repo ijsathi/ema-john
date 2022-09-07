@@ -28,17 +28,20 @@ const Cart = (props) => {
     const tax = (total + shipping) * 0.10;
     const grandTotal = total + shipping + tax;
     return (
-        <div>
-            <span className='order_summer'>
-                <h3>Order summer</h3>
-                <p>Items Orders: {totalQuantity}</p>
+        <div className='order_summer'>
+            <span>
+                <p className='summery'>Order summary</p>
+                <div className='subtotal'>
+                    <p>Subtotal ( {totalQuantity} items) </p>
+                    <p>$ {total.toFixed(2)}</p>
+                </div>
             </span>
             <span className="order_bill">
-                <p>Items Total : <span className='order_item_bill'>${total.toFixed(2)}</span></p>
-                <p>Shipping & Handling : <span className='order_item_bill'>${shipping}</span></p>
-                <p>Tax : <span className='order_item_bill'>${tax.toFixed(2)}</span></p>
+                {/* <p className='subtotal'><span>Items Total :</span> <span className='order_item_bill'>${total.toFixed(2)}</span></p> */}
+                <p className='subtotal'><span>Shipping & Handling </span> <span className='order_item_bill'>${shipping}</span></p>
+                <p className='subtotal'><span>Tax  </span><span className='order_item_bill'>${tax.toFixed(2)}</span></p>
             </span>
-            <p className='grant_total'>Grand Total : <span className='order_item_bill'>${grandTotal.toFixed(2)}</span></p>
+            <p className='grant_total subtotal'><span>Grand Total</span>  <span className='order_item_bill'>${grandTotal.toFixed(2)}</span></p>
             {props.children}
         </div>
     );

@@ -1,5 +1,21 @@
 .order_summer{
-    text-align: center;
+    background: #fff;
+    margin-top: 20px;
+    padding: 20px;
+}
+.summery{
+    font-size: 18px;
+    color: #212121;
+    margin-bottom: 14px;
+    position: relative;
+    font-weight: 500;
+}
+.subtotal{
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    color: #757575;
+    letter-spacing: 0;
 }
 .order_summer h3{
     font-size: 1.17em;
@@ -32,13 +48,10 @@
 }
 .remove_btn{
     background-color: #f0c14b;
-    border-color: #a88734 #9c7e31 #846a29;
+    border: none;
     color: #111;
-    width: 250px;
-    height: 26px;
-    border-style: solid;
-    border-width: 1px;
+    width: 200px;
+    height: 35px;
     cursor: pointer;
-    border-radius: 3px;
     vertical-align: middle;
 }

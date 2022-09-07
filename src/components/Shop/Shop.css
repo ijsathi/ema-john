@@ -19,7 +19,15 @@
     background-color: rgb(243, 242, 242);
     border: none;
 }
-
+.r-order_btn{
+    background-color: #f0c14b;
+    border: none;
+    color: #111;
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+    vertical-align: middle;
+}
 .btn {
     background: #f0c14b;
     color: #fff;
@@ -36,6 +44,7 @@
 .shop-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    background: rgb(243, 242, 242);
 
 }
 
@@ -45,20 +54,24 @@
     margin-left: 50px;
 }
 
-.pagination {
+.shop_pagination {
     margin: 30px;
 }
 
-.pagination button {
+.shop_pagination button {
     margin-right: 20px;
-    padding: 0 10px;
+    padding: 0 14px;
+    border: none;
+    background-color: #d7d7d7;
+    border-radius: 99px;
 }
 
-.pagination .selected {
+.shop_pagination .selected {
     background-color: rgb(44, 44, 245);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 7px 10px 7px 12px;
+    border-radius: 50px;
 }
 
 @media only screen and (max-width: 578px) {}

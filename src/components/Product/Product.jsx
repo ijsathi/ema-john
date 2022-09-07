@@ -16,13 +16,13 @@ const Product = (props) => {
                 <p className='product_name fs-6 fw-bold'>{name}</p>
                 <div style={{ display: "flex" }}>
                     <div>
-                        <p><small>By: {seller}</small></p>
-                        <p>Price : {price}</p>
+                        <p className=''><small>By: {seller}</small></p>
                         <p><small>Only {stock} left in stock - Order soon</small></p>
+                        <p className='product_price'>$ {price}</p>
                         <br />
                         <button
                             onClick={() => props.handleAddToCart(props.product)}
-                            className="regular_btn"><FontAwesomeIcon icon={faShoppingCart} /> Add to Cart</button>
+                            className="regular_btn"><FontAwesomeIcon icon={faShoppingCart} /> <small>Add to Cart</small></button>
                     </div>
                     <div style={{ marginTop: 40, marginLeft: 60 }}>
                         <Rating
@@ -32,7 +32,7 @@ const Product = (props) => {
                             initialRating={star}
                             style={{ color: "#ffbd00" }}
                         />
-                        <h4>Features</h4>
+                        <h6 className='fw-bold'>Features</h6>
                         <ul className='feature'>
                             {features.map(({ description, value }) => {
                                 return <>
