@@ -18,16 +18,29 @@ const Login = () => {
     }
     return (
         <div className='login_form'>
-            <div className='login_all'>
-                <h2 style={{textAlign:"center"}}>Login</h2>
-                <form>
-                    <input className='email_input' type="email" name="" id="" placeholder='write your email' /><br />
-                    <input className='pass_input' type="password" name="" id="" placeholder='your password' /><br />
-                    <input type="submit" value="Submit" />
-                </form>
-                <p>New to ema-John ? <Link to='/register'>Create Account</Link></p>
-                <p>-------------- or --------------</p>
-                <button className='regular_btn' onClick={handleGoogleLogin}>Google sign in</button>
+            <div>
+                <div className='new_user'>
+                    <p>Welcome to ema-John! Please login.</p>
+                    <p className='new_user2'><small>New to ema-John ? <Link to='/register' style={{ textDecoration: "none" }}>Register </Link>Here</small></p>
+                </div>
+                <div className='login_all'>
+
+                    <div className='log_work'>
+                        <form className='me-5'>
+                            <label className='input_label' htmlFor="email" >Email*</label>
+                            <input type="email" name="" id="" placeholder='Please enter your email' required/><br />
+                            <label className='input_label' htmlFor="password">Password*</label>
+                            <input type="password" name="" id="" placeholder='Please enter your password' required/><br />
+                            <input className='login_input' type="submit" disabled value="LOGIN" />
+                        </form>
+                        <div className=''>
+                            <p style={{ fontSize: "13px", color: "#424242", fontWight: 400 }}>Or, login with</p>
+                            <button disabled className='regular_btn_fb' onClick={handleGoogleLogin}>Facebook</button><br /><br />
+                            <button className='regular_btn_google' onClick={handleGoogleLogin}>Google </button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     );

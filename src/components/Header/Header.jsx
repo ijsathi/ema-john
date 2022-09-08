@@ -19,31 +19,17 @@ const Header = () => {
                     <Navbar.Collapse className='justify-text-end fw-normal'>
                         <Nav className="ms-auto ">
                             <Nav.Link>
-                                <Link className='nav-text nav-shop' style={{ textDecoration: 'none' }} to='shop'><small>SHOP</small></Link>
+                                <Link className='nav-text nav-shop me-5' style={{ textDecoration: 'none' }} to='shop'><small>SHOP</small></Link>
                             </Nav.Link>
                             <Nav.Link>
-                                <Link className='nav-text' style={{ textDecoration: 'none' }} to='order_review'><small> ORDER REVIEW </small></Link>
-                                {/* <Link className='nav-text' style={{ textDecoration: 'none' }} to='order_review'><small> <FontAwesomeIcon icon={faCartShopping} /> </small></Link> */}
+                                <Link className='nav-text me-5' style={{ textDecoration: 'none' }} to='order_review'><small> ORDER REVIEW </small></Link>
                             </Nav.Link>
-
-                            <NavDropdown title={<small className='nav-text'>MORE</small>} id="basic-nav-dropdown">
-                                <NavDropdown.Item href="">
-                                    <Nav.Link>
-                                        <Link style={{ color: '#000', textDecoration: 'none' }} to='about_us' >About Us</Link>
-                                    </Nav.Link>
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="">
-                                    <Nav.Link>
-                                        <Link style={{ color: '#000', textDecoration: 'none' }} to='contact_us' >Contact Us</Link>
-                                    </Nav.Link>
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="">
-                                    <Nav.Link>
-                                        <Link style={{ color: '#000', textDecoration: 'none' }} to='opinion' >Share Your Opinion</Link>
-                                    </Nav.Link>
-                                </NavDropdown.Item>
-
-                            </NavDropdown>
+                            <Nav.Link>
+                                <Link className='nav-text me-5' style={{ textDecoration: 'none' }} to='about_us'><small> ABOUT US</small></Link>
+                            </Nav.Link>
+                            <Nav.Link>
+                                <Link className='nav-text me-5' style={{ textDecoration: 'none' }} to='about_us'><small> CONTACT US</small></Link>
+                            </Nav.Link>
                         </Nav>
                         {!user.email ? (
                             <>
@@ -58,9 +44,9 @@ const Header = () => {
                                     as={HashLink}
                                     to="manage"
                                     style={{ textDecoration: 'none' }}
-                                    className="me-4 nav-text"
+                                    className="me-5 nav-text"
                                 >
-                                    Manage Inventory
+                                   <small>MANAGE INVENTORY</small> 
                                 </Nav.Link>
 
                                 <NavDropdown

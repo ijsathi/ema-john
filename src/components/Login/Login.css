@@ -1,17 +1,73 @@
-.login_form{
+.login_form {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.email_input, .pass_input{
+
+.login_all {
+    border: none;
+    padding: 30px;
+    margin-top: 20px;
+    background: rgb(243, 242, 242);
     width: 100%;
-    height: 20px;
+    height: 300px;
+}
+
+.new_user {
+    margin-top: 60px;
+    display: flex;
+    font-size: 18px;
+    color: #424242;
+    font-weight: 400;
+    justify-content: space-between;
+}
+.new_user2{
+    font-size: 13px;
+}
+.log_work {
+    display: flex;
+}
+
+.log_work input {
+    border: 0.9px solid rgb(156, 156, 156);
+    width: 350px;
+    height: 40px;
     margin-top: 3px;
     margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 15px;
+    overflow: hidden;
+    color: #424242;
+    display: block;
 }
-.login_all{  
-    border: 0.6px solid gray;
-    padding: 60px;
-    margin-top: 20px;
-    box-shadow: 10px 10px 10px gray;
+.login_input{
+    background: #f0c14b;
+    color: #fff;
+}
+.log_work div {
+    margin-left: 50px;
+}
+.input_label{
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    overflow: hidden;
+    color: #424242;
+    display: block;
+    margin-bottom: 5px;
+}
+.regular_btn_fb{
+    width: 100%;
+    border: none;
+    height: 40px;
+    background: #3b5998;
+    color: white;
+    margin-bottom: 10px;
+}
+.regular_btn_google{
+    width: 100%;
+    border: none;
+    height: 40px;
+    background: #d34836;
+    color: white;
 }
