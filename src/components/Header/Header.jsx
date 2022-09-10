@@ -64,8 +64,8 @@ const Header = () => {
                                     <div className="text-center">
                                         <p>{user.displayName}</p>
                                         <p className="m-0 mb-2"><small>{user.email}</small></p>
-                                        <button onClick={logOut} className="btn btn-primary fw-bold">
-                                            Sign Out
+                                        <button onClick={logOut} className="btn">
+                                           <small>SIGN OUT <FontAwesomeIcon icon={faRightToBracket} /></small>
                                         </button>
                                     </div>
                                 </NavDropdown>

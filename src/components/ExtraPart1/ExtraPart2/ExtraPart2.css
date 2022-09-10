@@ -1,0 +1,21 @@
+.extra_part2{
+    background: rgb(243, 242, 242);
+    margin: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.extra_part2 h5{
+    line-height: 27.3px!important;
+    font-weight: bold;
+}
+.extra_part_card{
+    padding: 10px;
+    border: none;
+    border-radius: 0 0 0 0;
+}
+.extra_part_card img{
+    border: none;
+    border-radius: 0 0 0 0;
+}
