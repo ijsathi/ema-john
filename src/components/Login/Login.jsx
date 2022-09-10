@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
@@ -35,8 +37,8 @@ const Login = () => {
                         </form>
                         <div className=''>
                             <p style={{ fontSize: "13px", color: "#424242", fontWight: 400 }}>Or, login with</p>
-                            <button disabled className='regular_btn_fb' onClick={handleGoogleLogin}>Facebook</button><br /><br />
-                            <button className='regular_btn_google' onClick={handleGoogleLogin}>Google </button>
+                            <button disabled className='regular_btn_fb' onClick={handleGoogleLogin}><FontAwesomeIcon className='me-2' icon={faPlus} /> Facebook</button><br /><br />
+                            <button className='regular_btn_google' onClick={handleGoogleLogin}><FontAwesomeIcon className='me-2' icon={faPlus} /> Google </button>
                         </div>
                     </div>
 

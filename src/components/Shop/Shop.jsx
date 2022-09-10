@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { addToDb, getStoredCart } from '../../utilities/fakedb';
-import { Nav, Navbar, NavDropdown, Form } from 'react-bootstrap';
+import { addToDb } from '../../utilities/fakedb';
+import {Form } from 'react-bootstrap';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
+import ExtraPart1 from '../ExtraPart1/ExtraPart1';
 
 const Shop = () => {
     // for all product
@@ -81,7 +82,7 @@ const Shop = () => {
     }
     return (
         <div>
-            <Navbar className='header2' variant="dark" sticky='top' collapseOnSelect expand="lg">
+            {/* <Navbar className='header2' variant="dark" sticky='top' collapseOnSelect expand="lg"> */}
                 <div className="search_container">
                     <div className="row w-100">
                         <div className="col-4">
@@ -125,7 +126,7 @@ const Shop = () => {
                         </div>
                     </div>
                 </div>
-            </Navbar>
+            {/* </Navbar> */}
             <div className='shop-container'>
                 <div className="product-container">
                     {
@@ -153,6 +154,7 @@ const Shop = () => {
                     </Cart>
                 </div>
             </div>
+            <ExtraPart1 />
         </div>
     );
 };

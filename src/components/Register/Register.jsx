@@ -1,3 +1,5 @@
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
@@ -43,10 +45,10 @@ const Register = () => {
                         <p className='text-center'><small style={{ color: "#757575" }}>Or, sign up with</small></p>
                         <div className='fb_ggl'>
                             <div>
-                                <button onClick={handleGoogleLogin} className='regular_btn_google'>Google</button>
+                                <button onClick={handleGoogleLogin} className='regular_btn_google'><FontAwesomeIcon className='me-2' icon={faPlus} />Google</button>
                             </div>
                             <div>
-                                <button disabled onClick={handleGoogleLogin} className='regular_btn_fb'>Facebook</button>
+                                <button disabled onClick={handleGoogleLogin} className='regular_btn_fb'><FontAwesomeIcon className='me-2' icon={faPlus} />Facebook</button>
                             </div>
                         </div>
                     </div>
