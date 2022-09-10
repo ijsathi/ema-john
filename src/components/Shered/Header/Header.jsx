@@ -29,7 +29,7 @@ const Header = () => {
                                 <Link className='nav-text me-5' style={{ textDecoration: 'none' }} to='about_us'><small> ABOUT US</small></Link>
                             </Nav.Link>
                             <Nav.Link>
-                                <Link className='nav-text me-5' style={{ textDecoration: 'none' }} to='about_us'><small> CONTACT US</small></Link>
+                                <Link className='nav-text me-5' style={{ textDecoration: 'none' }} to='contact_us'><small> CONTACT US</small></Link>
                             </Nav.Link>
                         </Nav>
                         {!user.email ? (
