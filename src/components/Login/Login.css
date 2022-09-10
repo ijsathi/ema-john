@@ -39,6 +39,7 @@
     overflow: hidden;
     color: #424242;
     display: block;
+    padding: 10px;
 }
 .login_input{
     background: #f0c14b;

@@ -5,7 +5,7 @@ import {Form } from 'react-bootstrap';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
-import ExtraPart1 from '../ExtraPart1/ExtraPart1';
+import ExtraPart1 from '../Shered/ExtraPart1/ExtraPart1';
 
 const Shop = () => {
     // for all product

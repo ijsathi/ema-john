@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import Header from './components/Header/Header';
 import NotFound from './components/NotFound/NotFound';
 import OrderReview from './components/OrderReview/OrderReview';
 import Shop from './components/Shop/Shop';
@@ -12,6 +11,11 @@ import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Shipping from './components/Shipping/Shipping';
 import Orders from './components/Orders/Orders';
+import Footer from './components/Shered/Footer/Footer';
+import Header from './components/Shered/Header/Header';
+import PrivacyPolicy from './components/Shered/PrivacyPolicy/PrivacyPolicy';
+import About from './components/Shered/About/About';
+import Contact from './components/Shered/Contact/Contact';
 
 const App = () => {
   return (
@@ -28,9 +32,13 @@ const App = () => {
           <Route path="orders" element={<PrivateRoute><Orders /></PrivateRoute>} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="about_us" element={<About />} />
+          <Route path="contact_us" element={<Contact />} />
+          <Route path="privacy_policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AuthProvider>
+      <Footer />
     </div>
   );
 };

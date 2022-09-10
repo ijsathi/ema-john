@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import "./ExtraPart1.css";
-import ExtraPart2 from "./ExtraPart2/ExtraPart2";
+import ExtraPart2 from "../ExtraPart2/ExtraPart2";
 
 const ExtraPart1 = () => {
     return (
